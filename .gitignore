@@ -341,4 +341,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-/AES_Fencrypt_GUI
+/AES_Fencrypt_GUI/sepStore.cs
