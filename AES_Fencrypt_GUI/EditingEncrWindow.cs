@@ -84,15 +84,6 @@ namespace AES_Fencrypt_GUI
                     // not possible due to not single object being allowed > 2GB assuming UTF-16 (2 bytes per character) in .NET
                     // much more realistic limit is 1,073,741,823 on 32-bit machines.
                     // a realistic limit is 50,000,000 characters, or ~ 12,500,000 words, roughly 250 pages. */
-
-                    //string Delimiter = "\\n"; // poor implementation - look into encrypting Environment.NewLine into .IBM file
-                    //string[] splitted = decrypted.Split(new[] { Delimiter }, StringSplitOptions.None);
-                    //int lim = splitted.Length;
-                    //for(int i = 0; i < lim; i++) // consider replacing with while loop
-                    //{
-                    //    fileOutput.AppendText(splitted[i]);
-                    //    fileOutput.AppendText(Environment.NewLine);
-                    //}
             }
             catch (Exception exp)
             {

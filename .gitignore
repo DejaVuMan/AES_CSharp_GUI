@@ -37,6 +37,7 @@ Generated\ Files/
 
 # ignore encryption key files
 AES_Fencrypt_GUI/AES_Fencrypt_GUI/sepStore.cs
+AES_CSharp_GUI/AES_Fencrypt_GUI/sepStore.cs
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
