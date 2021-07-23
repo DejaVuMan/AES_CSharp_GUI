@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using System.Diagnostics;
+using System.Data;
+using System.Linq;
+
+using System.Text;
+using System.Drawing;
 using System.Windows.Forms;
 
+using System.Diagnostics;
+using System.ComponentModel;
+using System.Collections.Generic;
+
+using System.Globalization;
 
 namespace AES_Fencrypt_GUI
 {
@@ -17,9 +19,9 @@ namespace AES_Fencrypt_GUI
     {
         private string filePath = "C:\\"; // Default file path explorer will use
         private string currentItemName = "";
-        private bool isFile = false;
+        private bool isFile; // compiler automatically initializes to false
 
-        private Home mainform;
+        private readonly Home mainform;
         public Browser(Home mainform)
         {
             InitializeComponent();
@@ -70,7 +72,7 @@ namespace AES_Fencrypt_GUI
             }
             catch(Exception e)
             {
-
+                MessageBox.Show("An exception occurred: {0}", e.ToString());
             }
         }
 
@@ -109,7 +111,7 @@ namespace AES_Fencrypt_GUI
                     for (int i = 0; i < fLength; i++)
                     {
                         // Switch Gate
-                        fileExtension = files[i].Extension.ToUpper();
+                        fileExtension = files[i].Extension.ToUpper(CultureInfo.InvariantCulture);
                         switch(fileExtension)
                         {
                             case ".MP3":
@@ -144,7 +146,6 @@ namespace AES_Fencrypt_GUI
                                 fileListBox.Items.Add(files[i].Name, 7);
                                 break;
                         }
-                        //fileListBox.Items.Add(files[i].Name, 7);
                     }
 
                     for (int i = 0; i < dirs.Length; i++)
@@ -159,7 +160,7 @@ namespace AES_Fencrypt_GUI
             }
             catch (Exception e) // markiplier
             {
-
+                MessageBox.Show("An exception occurred: {0}", e.ToString());
             }
         }
 
