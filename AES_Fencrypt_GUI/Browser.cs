@@ -1,10 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Data;
-using System.Linq;
 
-using System.Text;
-using System.Drawing;
 using System.Windows.Forms;
 
 using System.Diagnostics;
@@ -166,11 +162,7 @@ namespace AES_Fencrypt_GUI
 
         public void loadButtonAction() // when file path is entered and we press go, this part is used in goButton_click
         {
-            if(filePathBox.Text == "C:\\")
-            {
-                
-            }
-            else
+            if(filePathBox.Text != "C:\\")
             {
                 removeBackslash(); // unique issue with C: drive ?
             }

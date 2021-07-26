@@ -16,7 +16,7 @@ namespace AES_Fencrypt_GUI
         private Browser childform;
         private EncryptWindow childform2;
 
-        public string finalpath = "";
+        private string finalpath = "";
         public Home()
         {
             InitializeComponent();
